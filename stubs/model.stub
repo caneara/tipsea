@@ -1,0 +1,19 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Types\Model;
+use App\Concerns\{{ class }}\Relationships;
+
+class {{ class }} extends Model
+{
+    use Relationships;
+
+    /**
+     * The attributes that should be cast to specific types.
+     *
+     */
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}

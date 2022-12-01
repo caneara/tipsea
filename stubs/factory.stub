@@ -1,0 +1,21 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Types\Factory;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+
+class {{ factory }}Factory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     */
+    public function definition() : array
+    {
+        return [
+            //
+        ];
+    }
+}

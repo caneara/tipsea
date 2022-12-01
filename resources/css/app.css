@@ -1,0 +1,84 @@
+@layer base
+{
+    /**
+     * Fira Code.
+     *
+     */
+    @font-face
+    {
+        font-family: 'Fira Code VF';
+        font-style: normal;
+        font-weight: 300 700;
+        font-variant-numeric: proportional-nums;
+        src: url('/fonts/FiraCode.woff2') format('woff2')
+    }
+
+    /**
+     * Reset.
+     *
+     */
+    body { margin-bottom: 0 !important; font-variant-numeric: proportional-nums }
+    hr { @apply my-10 dark:border-gray-800 }
+    svg { @apply fill-current }
+    input::placeholder { @apply pt-2px }
+    textarea::placeholder { @apply text-gray-600 }
+    div, button, input, textarea, select { @apply outline-none focus:outline-none active:outline-none ; font-variant-numeric: proportional-nums }
+    input:-webkit-autofill { animation-name: autofill; animation-fill-mode: both; transition-delay: 99999s }
+    input:-webkit-autofill + label { @apply bg-transparent }
+    input:-webkit-autofill + label + .clear { @apply bg-transparent }
+
+    /**
+     * Utilities.
+     *
+     */
+    .break { @apply break-words ; word-break: break-word }
+    .clamp { @apply overflow-hidden break-words ; display: -webkit-box; -webkit-box-orient: vertical ; -webkit-line-clamp: 1 }
+    .clamp.two-lines { -webkit-line-clamp: 2 }
+    .clamp.three-lines { -webkit-line-clamp: 3 }
+
+    /**
+     * Typography.
+     *
+     */
+    h1 { @apply font-bold text-30px text-gray-900 dark:text-gray-300 mb-8 }
+    h2 { @apply font-bold text-27px text-gray-900 dark:text-gray-300 mb-7 }
+    h3 { @apply font-semibold text-23px text-gray-900 dark:text-gray-300 mb-6 }
+    h4 { @apply font-semibold text-21px text-gray-900 dark:text-gray-300 mb-5 }
+    h5 { @apply font-semibold text-19px text-gray-900 dark:text-gray-400 mb-5 }
+    h6 { @apply font-medium text-17px text-sky-800 dark:text-sky-500 mb-5 }
+    p { @apply text-16px text-gray-700/90 dark:text-gray-400/80 leading-normal mb-6 }
+    li { @apply text-16px text-gray-700/90 dark:text-gray-400/80 leading-normal list-disc ml-6 mb-2px }
+    a { @apply text-sky-600 dark:text-sky-500 hover:text-rose-700 dark:hover:text-rose-400 no-underline transition duration-300 }
+    pre { @apply text-16px text-gray-700/90 dark:text-gray-400/80 leading-normal mb-7 }
+    code { @apply -tracking-[0.01em] }
+    span { @apply leading-none }
+    p code { @apply font-[450] }
+    li code { @apply font-[450] }
+
+    /**
+     * Markdown.
+     *
+     */
+    .varnish-writer.public .varnish-container .varnish-preview h1 { @apply text-20px }
+    .varnish-writer.public .varnish-container .varnish-preview h2 { @apply text-19px }
+    .varnish-writer.public .varnish-container .varnish-preview h3 { @apply text-18px }
+    .varnish-writer.public .varnish-container .varnish-preview h4 { @apply text-17px }
+    .varnish-writer.public .varnish-container .varnish-preview h5 { @apply text-16px }
+    .varnish-writer.public .varnish-container .varnish-preview h6 { @apply text-15px }
+
+    /**
+     * Screenshot.
+     *
+     */
+    .screenshot .varnish-writer .varnish-container .varnish-preview * { @apply text-20px }
+    .screenshot .varnish-writer .varnish-container .varnish-preview p { @apply leading-normal tracking-[0.007em] }
+    .screenshot .varnish-writer .varnish-container .varnish-preview .hljs { @apply text-19px overflow-hidden leading-[1.5em] }
+}
+
+/**
+ * Tailwind CSS.
+ *
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
